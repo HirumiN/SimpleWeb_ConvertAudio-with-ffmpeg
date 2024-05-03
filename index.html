@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Convert Audio File</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+
+        header {
+            background: linear-gradient(90deg, #007BFF, #00FFA1);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: 'Lobster', sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0;
+            color: #fff;
+            background: linear-gradient(90deg, #007BFF, #00FFA1);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .form-container {
+            background: linear-gradient(90deg, #fff, #f2f2f2);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            width: calc(100% - 20px);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="file"],
+        select {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        select:hover,
+        select:focus {
+            border-color: #66afe9;
+            box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .decoration {
+            border-top: 1px solid #ccc;
+            margin-top: 40px;
+            padding-top: 10px;
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+            background: linear-gradient(90deg, #ffcccc, #ff9999);
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Yonvert</h1>
+    </header>
+<<<<<<< HEAD
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="profile-block bg-info p-4 rounded">
+                    <img src="gambar_profil.jpg" alt="Foto Profil" class="img-fluid rounded-circle" style="max-width: 200px;">
+                    <h2 class="mt-4">Fuzaki ganteng</h2>
+                    <p class="lead">Masih coba-coba</p>
+                    <a class="btn btn-info" href="index.php">Lihat Profil Lain</a>
+=======
+    <div class="container">
+        <div class="form-container">
+            <h2>Convert Audio File</h2>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="fileToUpload">Select audio file to upload:</label>
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+>>>>>>> e7c626e (ouh)
+                </div>
+                <div class="form-group">
+                    <label for="uploadFormat">Select upload format:</label>
+                    <select name="uploadFormat" id="uploadFormat">
+                        <option value="mp3">MP3</option>
+                        <option value="wma">WMA</option>
+                        <option value="flac">FLAC</option>
+                        <option value="ogg">OGG</option>
+                        <option value="aac">AAC</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="compressionFormat">Select compression format:</label>
+                    <select name="compressionFormat" id="compressionFormat">
+                        <option value="mp3">MP3</option>
+                        <option value="wma">WMA</option>
+                        <option value="flac">FLAC</option>
+                        <option value="ogg">OGG</option>
+                        <option value="aac">AAC</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Convert Audio" name="submit">
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>Compress Audio</h2>
+            <form action="compress.php" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="fileToCompress">Select audio file to compress:</label>
+                    <input type="file" name="fileToCompress" id="fileToCompress">
+                </div>
+                <div class="form-group">
+                    <label for="compressionOption">Select compression option:</label>
+                    <select name="compressionOption" id="compressionOption">
+                        <option value="quality">Compression Quality</option>
+                        <option value="size">Maximum Size</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="qualityOrSize">Enter quality (1-10) or size (in bytes):</label>
+                    <input type="text" name="qualityOrSize" id="qualityOrSize">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Compress Audio" name="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="decoration">
+        <!-- Decoration
